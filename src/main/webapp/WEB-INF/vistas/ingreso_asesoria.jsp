@@ -10,7 +10,7 @@
 	<div class="row">
 		<div class="col-lg-12">
 			<div class="panel-heading">
-				<h1 class="page-header">Ingresar nueva asesoria</h1>
+				<h1 class="page-header">Asesoria</h1>
 			</div>
 		</div>
 		<!-- /.col-lg-12 -->
@@ -19,10 +19,17 @@
 	<div class="row">
 		<div class="col-lg-12">
 			<div class="panel panel-green">
-				<div class="panel-heading"><h4>Ingrese los datos</h4></div>
+				<div class="panel-heading">
+					<h4>Ingrese los datos</h4>
+				</div>
 				<div class="panel-body">
-					<form:form method="post" action="ingresoasesoria"
-						modelAttribute="ingresoasesoria">
+
+					<form:form method="post" action="/profesional/guardarasesoria"
+						modelAttribute="asesoria">
+
+						<form:input path="idAse" class="form-control" type="hidden" />
+
+
 						<div class="form-group col-lg-5">
 							<label>Tipo de asesoria</label>
 							<form:input path="tipoAse" class="form-control" type="text" />
@@ -50,16 +57,31 @@
 						</div>
 
 
-
 						<div class="form-group col-lg-5">
 							<label>Empresa</label>
-							<form:input path="empresaRut" class="form-control" type="text" />
+							<form:select path="empresaRut" class="form-control">
+								<form:option value="" label="--Selecciones Empresa--" />
+								<c:forEach items="${listadoemp}" var="obj">
+									<form:option value="${obj.nombreEmp}">
+										<c:out value="${obj.nombreEmp}" />
+									</form:option>
+								</c:forEach>
+							</form:select>
+
 						</div>
+
 
 						<div class="form-group col-lg-5">
 							<label>Profesional</label>
-							<form:input path="profesionalRut" class="form-control"
-								type="text" />
+							<form:select path="profesionalRut" class="form-control">
+								<form:option value="" label="--Seleccione Profesional--" />
+								<c:forEach items="${listadopro}" var="obj">
+									<form:option value="${obj.rutPro}">
+										<c:out value="${obj.nombrePro}" />
+									</form:option>
+								</c:forEach>
+							</form:select>
+
 						</div>
 
 						<div class="form-group col-lg-12">
@@ -67,21 +89,17 @@
 							<form:textarea path="obsAse" class="form-control" rows="3"></form:textarea>
 						</div>
 						<br>
+						<button type="submit"
+							class="offset-lg-1 btn btn-default btn-success btn-form">Aceptar</button>
+						<button type="reset"
+							class="offset-lg-1 btn btn-default btn-danger btn-form">Cancelar</button>
+
 					</form:form>
 				</div>
-				<div class="panel-footer">
-
-					<button type="submit"
-						class="offset-lg-1 btn btn-default btn-success btn-form">Submit
-						Button</button>
-					<button type="reset"
-						class="offset-lg-1 btn btn-default btn-danger btn-form">Reset
-						Button</button>
-
-				</div>
+				<div class="panel-footer"></div>
 			</div>
 		</div>
-
-
 	</div>
-	<jsp:include page="plantillas/scripts.jsp"></jsp:include>
+
+</div>
+<jsp:include page="plantillas/scripts.jsp"></jsp:include>

@@ -50,7 +50,8 @@ public class ProfesionalesService implements IProfesionalesServices {
 	public Optional<ProfesionalesEntity> listarId(int id) {
 		// TODO Auto-generated method stub
 			
-		return null;
+		return data.findById(id);
+		
 	}
 
 }

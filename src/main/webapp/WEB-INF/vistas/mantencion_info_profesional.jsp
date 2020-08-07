@@ -11,7 +11,7 @@
 <div id="page-wrapper">
 	<div class="row">
 		<div class="col-lg-10">
-			<h1 class="page-header">Ingresar Nuevo Profesional</h1>
+			<h1 class="page-header">Profesional</h1>
 		</div>
 
 		
@@ -20,9 +20,12 @@
 	<!-- /.row -->
 	<div class="row">
 		<div class="col-lg-12 col-md-6">
-			<form:form method="post" action="guardarprofesional"
+			<form:form method="post" action="/administrador/guardarprofesional"
 				modelAttribute="profesional">
 				<div class="form-group col-lg-5">
+				
+				<form:input path="idPro" class="form-control" type="hidden" />
+				
 					<label>Nombre</label>
 					<form:input path="nombrePro" class="form-control" type="text" />
 				</div>

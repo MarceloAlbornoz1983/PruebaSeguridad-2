@@ -17,6 +17,7 @@
 		</div>
 		<!-- /.col-lg-12 -->
 	</div>
+	<br>
 	<!-- /.row -->
 	<div class="row">
 		<div class="col-lg-12">
@@ -46,12 +47,14 @@
 									<td><c:out value="${obj.rutProf}"/></td>
 									<td align="center">
 										<div class="btn-group">
-											<button class="btn btn-warning">
+											<a href="editarmejora/${obj.idActividadMejora}"><button class="btn btn-warning">
 												<i class="fa fa-pencil"></i>
-											</button>
-											<button class="btn btn-danger">
+											</button></a>
+											<a onclick="eliminarmejora([[${obj.idActividadMejora}]])"><button class="btn btn-danger">
 												<i class="fa fa-times"></i>
-											</button>
+											</button></a>
+
+
 
 										</div>
 								</tr>

@@ -50,6 +50,6 @@ public class CapacitacionService implements ICapacitacionServices {
 	public Optional<CapacitacionEntity> listarId(int id) {
 		// TODO Auto-generated method stub
 			
-		return null;
+		return data.findById(id);
 	}
 }

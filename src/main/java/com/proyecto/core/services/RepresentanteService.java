@@ -4,11 +4,13 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.proyecto.core.dao.RepresentanteRepository;
 import com.proyecto.core.interfaces.IRepresentanteServices;
 import com.proyecto.core.model.RepresentanteEntity;
 
+@Service
 public class RepresentanteService implements IRepresentanteServices {
 
 	@Autowired
@@ -42,6 +44,6 @@ public class RepresentanteService implements IRepresentanteServices {
 	public Optional<RepresentanteEntity> listarId(int id) {
 		// TODO Auto-generated method stub
 			
-		return null;
+		return data.findById(id);
 	}
 }

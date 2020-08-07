@@ -4,11 +4,13 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.proyecto.core.dao.AsesoriaEspecialRepository;
 import com.proyecto.core.interfaces.IAsesoriaEspecialServices;
 import com.proyecto.core.model.AsesoriaEspecialEntity;
 
+@Service
 public class AsesoriaEspecialService implements IAsesoriaEspecialServices {
 	
 	@Autowired
@@ -42,6 +44,6 @@ public class AsesoriaEspecialService implements IAsesoriaEspecialServices {
 	public Optional<AsesoriaEspecialEntity> listarId(int id) {
 		// TODO Auto-generated method stub
 			
-		return null;
+		return data.findById(id);
 	}
 }

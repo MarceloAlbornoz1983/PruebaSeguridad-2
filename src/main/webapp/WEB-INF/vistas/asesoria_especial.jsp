@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@  taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 
@@ -8,111 +9,61 @@
 <div id="page-wrapper">
 	<div class="row">
 		<div class="col-lg-12">
-			<h1 class="page-header">Solicitar Asesoria Especial</h1>
+			<div class="panel-heading">
+				<h1 class="page-header">Asesoria Especial</h1>
+			</div>
 		</div>
 		<!-- /.col-lg-12 -->
 	</div>
 	<!-- /.row -->
 	<div class="row">
-		<div class="col-lg-6 col-md-6">
-			<form role="form">
-				<div class="form-group">
-					<label>Text Input</label> <input class="form-control">
-					<p class="help-block">Example block-level help text here.</p>
+		<div class="col-lg-12">
+			<div class="panel panel-green">
+				<div class="panel-heading">
+					<h4>Ingrese los datos</h4>
 				</div>
-				<div class="form-group">
-					<label>Text Input with Placeholder</label> <input
-						class="form-control" placeholder="Enter text">
-				</div>
-				<div class="form-group">
-					<label>Static Control</label>
-					<p class="form-control-static">email@example.com</p>
-				</div>
-				<div class="form-group">
-					<label>File input</label> <input type="file">
-				</div>
-				<div class="form-group">
-					<label>Text area</label>
-					<textarea class="form-control" rows="3"></textarea>
-				</div>
-				<div class="form-group">
-					<label>Checkboxes</label>
-					<div class="checkbox">
-						<label> <input type="checkbox" value="">Checkbox 1
-						</label>
-					</div>
-					<div class="checkbox">
-						<label> <input type="checkbox" value="">Checkbox 2
-						</label>
-					</div>
-					<div class="checkbox">
-						<label> <input type="checkbox" value="">Checkbox 3
-						</label>
-					</div>
-				</div>
-				<div class="form-group">
-					<label>Inline Checkboxes</label> <label class="checkbox-inline">
-						<input type="checkbox">1
-					</label> <label class="checkbox-inline"> <input type="checkbox">2
-					</label> <label class="checkbox-inline"> <input type="checkbox">3
-					</label>
-				</div>
-				<div class="form-group">
-					<label>Radio Buttons</label>
-					<div class="radio">
-						<label> <input type="radio" name="optionsRadios"
-							id="optionsRadios1" value="option1" checked>Radio 1
-						</label>
-					</div>
-					<div class="radio">
-						<label> <input type="radio" name="optionsRadios"
-							id="optionsRadios2" value="option2">Radio 2
-						</label>
-					</div>
-					<div class="radio">
-						<label> <input type="radio" name="optionsRadios"
-							id="optionsRadios3" value="option3">Radio 3
-						</label>
-					</div>
-				</div>
-				<div class="form-group">
-					<label>Inline Radio Buttons</label> <label class="radio-inline">
-						<input type="radio" name="optionsRadiosInline"
-						id="optionsRadiosInline1" value="option1" checked>1
-					</label> <label class="radio-inline"> <input type="radio"
-						name="optionsRadiosInline" id="optionsRadiosInline2"
-						value="option2">2
-					</label> <label class="radio-inline"> <input type="radio"
-						name="optionsRadiosInline" id="optionsRadiosInline3"
-						value="option3">3
-					</label>
-				</div>
-				<div class="form-group">
-					<label>Selects</label> <select class="form-control">
-						<option>1</option>
-						<option>2</option>
-						<option>3</option>
-						<option>4</option>
-						<option>5</option>
-					</select>
-				</div>
-				<div class="form-group">
-					<label>Multiple Selects</label> <select multiple
-						class="form-control">
-						<option>1</option>
-						<option>2</option>
-						<option>3</option>
-						<option>4</option>
-						<option>5</option>
-					</select>
-				</div>
-				<button type="submit" class="btn btn-default">Submit Button</button>
-				<button type="reset" class="btn btn-default">Reset Button</button>
-			</form>
-		</div>
+				<div class="panel-body">
 
+					<form:form method="post" action="/profesional/guardarasesoriaespecial"
+						modelAttribute="asesoriaespecial">
+
+						<form:input path="idAsesoriaEspecial" class="form-control" type="hidden" />
+
+
+						<div class="form-group col-lg-5">
+							<label>Tipo de asesoria Especial</label>
+							<form:input path="tipoAsesoria" class="form-control" type="text" />
+						</div>
+						
+						<div class="form-group col-lg-5">
+							<label>Empresa</label>
+							<form:select path="rutEmpresa" class="form-control">
+								<form:option value="" label="--Selecciones Empresa--" />
+								<c:forEach items="${listadoemp}" var="obj">
+									<form:option value="${obj.nombreEmp}">
+										<c:out value="${obj.nombreEmp}" />
+									</form:option>
+								</c:forEach>
+							</form:select>
+
+						</div>
+
+						<div class="form-group col-lg-12">
+							<label>Observaciones</label>
+							<form:textarea path="obserSolicEspecial" class="form-control" rows="3"></form:textarea>
+						</div>
+						<br>
+						<button type="submit"
+							class="offset-lg-1 btn btn-default btn-success btn-form">Aceptar</button>
+						<button type="reset"
+							class="offset-lg-1 btn btn-default btn-danger btn-form">Cancelar</button>
+
+					</form:form>
+				</div>
+				<div class="panel-footer"></div>
+			</div>
+		</div>
 	</div>
-	<!-- /.row -->
 
 </div>
 <jsp:include page="plantillas/scripts.jsp"></jsp:include>

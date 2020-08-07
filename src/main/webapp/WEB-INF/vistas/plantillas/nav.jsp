@@ -125,19 +125,14 @@
 						<li><a href="#"><i class="fa fa-wrench fa-fw"></i>Profesional<span
 								class="fa arrow"></span></a>
 							<ul class="nav nav-second-level">
-								<li><a href="/profesional/capacitacion">Crear
-										Capacitacion</a></li>
-								<li><a href="/profesional/lista_capacitacion">Lista de
-										Capacitaciones</a></li>
-								<li><a href="/profesional/visita">Planificar Visita</a></li>
+								<li><a href="/profesional/lista_capacitacion">Capacitaciones</a></li>
+								<li><a href="/profesional/listavisita">Visitas</a></li>
 								<li><a href="/profesional/revisar_cliente">Revisar
 										Cliente</a></li>
-								<li><a href="/profesional/asesoria">Crear Caso de
-										Asesoria</a></li>
+								<li><a href="/profesional/listaasesoria">Asesorias</a></li>
 								<li><a href="/profesional/listaractividadmejora">Ingresar Actividad de
 										Mejora</a></li>
-								<li><a href="/profesional/ingreso_asesoria">Ingresar
-										Asesoria</a></li></li>
+								<li><a href="/profesional/listaasesoriaespecial">Asesoria Especial</a></li></li>
 						<li><a href="/profesional/crear_check">Crear Check List</a></li>
 						<li><a href="/profesional/responder_check">Responder
 								Check List</a></li>

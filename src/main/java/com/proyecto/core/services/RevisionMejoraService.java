@@ -4,11 +4,13 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.proyecto.core.dao.RevisionMejoraRepository;
 import com.proyecto.core.interfaces.IRevisionMejoraServices;
 import com.proyecto.core.model.RevisionMejoraEntity;
 
+@Service
 public class RevisionMejoraService implements IRevisionMejoraServices {
 
 	@Autowired
@@ -42,6 +44,6 @@ public class RevisionMejoraService implements IRevisionMejoraServices {
 	public Optional<RevisionMejoraEntity> listarId(int id) {
 		// TODO Auto-generated method stub
 			
-		return null;
+		return data.findById(id);
 	}
 }

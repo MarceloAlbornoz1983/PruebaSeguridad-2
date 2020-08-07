@@ -46,7 +46,7 @@ public class ActividadMejoraService implements IActividadMejoraServices {
 	public Optional<ActividadMejoraEntity> listarId(int id) {
 		// TODO Auto-generated method stub
 			
-		return null;
+		return data.findById(id);
 	}
 
 }

@@ -50,7 +50,7 @@ public class EmpresaService implements IEmpresaServices {
 	public Optional<EmpresaEntity> listarId(int id) {
 		// TODO Auto-generated method stub
 			
-		return null;
+		return data.findById(id);
 	}
 
 }

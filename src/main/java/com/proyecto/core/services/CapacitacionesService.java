@@ -4,11 +4,13 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.proyecto.core.dao.CapacitacionesRepository;
 import com.proyecto.core.interfaces.ICapacitacionesServices;
 import com.proyecto.core.model.CapacitacionesEntity;
 
+@Service
 public class CapacitacionesService implements ICapacitacionesServices {
 
 	@Autowired
@@ -42,6 +44,6 @@ public class CapacitacionesService implements ICapacitacionesServices {
 	public Optional<CapacitacionesEntity> listarId(int id) {
 		// TODO Auto-generated method stub
 			
-		return null;
+		return data.findById(id);
 	}
 }

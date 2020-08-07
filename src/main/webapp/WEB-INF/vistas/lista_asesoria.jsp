@@ -8,16 +8,16 @@
 <div id="page-wrapper">
 	<div class="row">
 		<div class="col-lg-10">
-			<h1 class="page-header">Empresas</h1>
+			<h1 class="page-header">Agenda de Asesorias</h1>
 		</div>
 		<div class="col-lg-2">
 
-			<a href="mantencioninfocliente"><button
+			<a href="ingresoasesoria"><button
 					class="btn btn-success page-header">Agregar Nuevo</button></a>
 		</div>
-		<br>
 		<!-- /.col-lg-12 -->
 	</div>
+	<br>
 	<!-- /.row -->
 	<div class="row">
 		<div class="col-lg-12">
@@ -30,40 +30,40 @@
 						id="dataTables-example">
 						<thead>
 							<tr>
+								<th>Tipo de asesoria</th>								
+								<th>Tema</th>
+								<th>Asesoria incluida</th>
+								<th>Fecha agendada</th>
+								<th>Fecha realizada</th>
 								<th>Empresa</th>
-								<th>Representante</th>
-								<th>Rut</th>
-								<th>Direccion</th>
-								<th>Fono</th>
-								<th>Correo</th>
-								<th>Giro</th>
-								<th>Fecha ingreso</th>
-								<th>Trabajadores</th>
+								<th>Profesional</th>
+								<th>Observaciones</th>
 								<th>Acciones</th>
 							</tr>
 						</thead>
 						<tbody>
 							<c:forEach items="${listado}" var="obj">
 								<tr class="odd gradeX">
-									<td><c:out value="${obj.nombreEmp}"/></td>
-									<td><c:out value="${obj.representanteEmp}"/></td>
-									<td><c:out value="${obj.rutEmp}"/></td>
-									<td><c:out value="${obj.direccionEmp}"/></td>
-									<td><c:out value="${obj.telEmp}"/></td>
-									<td><c:out value="${obj.correoEmp}"/></td>
-									<td><c:out value="${obj.giroEmp}"/></td>
-									<td><c:out value="${obj.fechaIngresoEmp}"/></td>
-									<td><c:out value="${obj.numeroTrabajadoresEne}"/></td>
+									<td><c:out value="${obj.tipoAse}"/></td>
+									<td><c:out value="${obj.temaAse}"/></td>
+									<td><c:out value="${obj.asesoriaInc}"/></td>
+									<td><c:out value="${obj.fechaAsesoriaAge}"/></td>
+									<td><c:out value="${obj.fechaAsesoriaReal}"/></td>
+									<td><c:out value="${obj.empresaRut}"/></td>
+									<td><c:out value="${obj.profesionalRut}"/></td>
+									<td><c:out value="${obj.obsAse}"/></td>
+									
 									<td align="center">
 										<div class="btn-group">
-											<a href="editaremp/${obj.idEmp}"><button class="btn btn-warning">
+											<a href="editarasesoria/${obj.idAse}"><button class="btn btn-warning">
 												<i class="fa fa-pencil"></i>
 											</button></a>
-											<a onclick="eliminaremp([[${obj.idEmp}]])"><button class="btn btn-danger">
+											<a onclick="eliminarasesoria([[${obj.idAse}]])"><button class="btn btn-danger">
 												<i class="fa fa-times"></i>
 											</button></a>
 
 										</div>
+									</td>
 								</tr>
 							</c:forEach>						
 						</tbody>

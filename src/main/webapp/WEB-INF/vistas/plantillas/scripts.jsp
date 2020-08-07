@@ -12,6 +12,11 @@
 <!-- <script src="../resources/vendor/morrisjs/morris.min.js"></script> -->
 <!-- <script src="../resources/data/morris-data.js"></script> -->
 
+<!-- Sweet Alert -->
+<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script src="../resources/js/validaciones.js"></script>
+
 
 <!-- DataTables JavaScript -->
 <script src="../resources/vendor/datatables/js/jquery.dataTables.min.js"></script>

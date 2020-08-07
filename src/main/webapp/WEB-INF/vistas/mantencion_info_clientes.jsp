@@ -11,7 +11,7 @@
 <div id="page-wrapper">
 	<div class="row">
 		<div class="col-lg-10">
-			<h1 class="page-header">Ingresar Nuevo Cliente</h1>
+			<h1 class="page-header">Empresa</h1>
 		</div>
 
 		<!-- /.col-lg-12 -->
@@ -19,8 +19,11 @@
 	<!-- /.row -->
 	<div class="row">
 		<div class="col-lg-12 col-md-6">
-			<form:form method="post" action="nuevaempresa"
+			<form:form method="post" action="/administrador/nuevaempresa"
 				modelAttribute="empresa">
+
+				<form:input path="idEmp" class="form-control" type="hidden" />
+
 				<div class="form-group col-lg-5">
 					<label>Nombre empresa</label>
 					<form:input path="nombreEmp" class="form-control" type="text" />
@@ -67,7 +70,7 @@
 						type="text" />
 				</div>
 
-				
+
 				<div class="form-group col-lg-5">
 					<label>Administrador que registra Prueba select</label>
 
@@ -83,10 +86,10 @@
 				</div>
 
 				<div class="col-lg-8">
-					<button type="submit" class="btn btn-default btn-success btn-form">Submit
-						Button</button>
-					<button type="reset" class="btn btn-default btn-danger btn-form">Reset
-						Button</button>
+					<button type="submit" class="btn btn-default btn-success btn-form">Aceptar
+					</button>
+					<button type="reset" class="btn btn-default btn-danger btn-form">Cancelar
+					</button>
 				</div>
 			</form:form>
 		</div>

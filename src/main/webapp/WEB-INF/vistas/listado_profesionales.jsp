@@ -17,6 +17,7 @@
 		</div>
 		<!-- /.col-lg-12 -->
 	</div>
+	<br>
 	<!-- /.row -->
 	<div class="row">
 		<div class="col-lg-12">
@@ -55,12 +56,12 @@
 									<td><c:out value="${obj.admRut}" /></td>
 									<td align="center">
 										<div class="btn-group">
-											<button class="btn btn-warning">
+											<a href="editarprofesional/${obj.idPro}"><button class="btn btn-warning">
 												<i class="fa fa-pencil"></i>
-											</button>
-											<button class="btn btn-danger">
+											</button></a>
+											<a onclick="eliminarprofesional([[${obj.idPro}]])"><button class="btn btn-danger">
 												<i class="fa fa-times"></i>
-											</button>
+											</button></a>
 
 										</div>
 									</td>

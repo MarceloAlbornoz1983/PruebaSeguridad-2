@@ -10,7 +10,7 @@
 	<div class="row">
 		<div class="col-lg-12">
 			<div class="panel-heading">
-				<h1 class="page-header">Ingresar nuevo administrador</h1>
+				<h1 class="page-header">Administrador</h1>
 			</div>
 		</div>
 		<!-- /.col-lg-12 -->

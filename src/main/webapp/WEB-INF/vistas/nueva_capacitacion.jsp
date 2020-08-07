@@ -10,14 +10,16 @@
             <div id="page-wrapper">
                 <div class="row">
                     <div class="col-lg-12">
-                        <h1 class="page-header">Crear Capacitacion</h1>
+                        <h1 class="page-header">Capacitacion</h1>
                     </div>
                     <!-- /.col-lg-12 -->
                 </div>
                 <!-- /.row -->
                 <div class="row">
                     <div class="col-md-6">
-                        <form:form method="post" action="guardarcapacitacion" modelAttribute="capacitacion">
+                        <form:form method="post" action="/administrador/guardarcapacitacion" modelAttribute="capacitacion">
+                            <form:input path="idCap" class="form-control" type="hidden"/>
+                            
                             <div class="form-group col-lg-8">
                                 <label>Nombre capacitación</label>
                                 <form:input path="nomCap" class="form-control" type="text"/>
@@ -33,8 +35,8 @@
                             </div>
                             
                             <div class="col-lg-8">
-                                <button type="submit" class="btn btn-default btn-success btn-form">Submit Button</button>
-                                <button type="reset" class="btn btn-default btn-danger btn-form">Reset Button</button>
+                                <button type="submit" class="btn btn-default btn-success btn-form">Aceptar</button>
+                                <button type="reset" class="btn btn-default btn-danger btn-form">Cancelar</button>
                             </div>
                         </form:form>
                     </div>

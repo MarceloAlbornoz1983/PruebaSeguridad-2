@@ -17,6 +17,7 @@
 		</div>
 		<!-- /.col-lg-12 -->
 	</div>
+	<br>
 	<!-- /.row -->
 	<div class="row">
 		<div class="col-lg-12">
@@ -52,7 +53,7 @@
 											<a href="editaradmin/${obj.idAdm}"><button class="btn btn-warning">
 												<i class="fa fa-pencil"></i>
 											</button></a>
-											<a href="eliminaradmin/${obj.idAdm}"><button class="btn btn-danger">
+											<a onclick="eliminaradmin([[${obj.idAdm}]])"><button class="btn btn-danger">
 												<i class="fa fa-times"></i>
 											</button></a>
 

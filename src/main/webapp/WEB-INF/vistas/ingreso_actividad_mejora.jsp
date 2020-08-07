@@ -19,8 +19,10 @@
 	<!-- /.row -->
 	<div class="row">
 		<div class="col-lg-12 col-md-6">
-			<form:form method="post" action="nuevaactividad"
-				modelAttribute="nuevaactividad">
+			<form:form method="post" action="/profesional/nuevaactividad"
+				modelAttribute="actividadmejora">
+				
+				<form:input path="idActividadMejora" class="form-control" type="hidden" />
 				<div class="form-group col-lg-5">
 					<label>Problema detectado</label>
 					<form:input path="problemaDet" class="form-control" type="text" />
@@ -63,10 +65,8 @@
 				</div>
 
 				<div class="col-lg-8">
-					<button type="submit" class="btn btn-default btn-success btn-form">Submit
-						Button</button>
-					<button type="reset" class="btn btn-default btn-danger btn-form">Reset
-						Button</button>
+					<button type="submit" class="btn btn-default btn-success btn-form">Aceptar</button>
+					<button type="reset" class="btn btn-default btn-danger btn-form">Cancelar</button>
 				</div>
 			</form:form>
 		</div>

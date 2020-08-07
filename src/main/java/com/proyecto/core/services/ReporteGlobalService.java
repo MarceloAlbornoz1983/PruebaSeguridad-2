@@ -4,11 +4,13 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.proyecto.core.dao.ReporteGlobalRepository;
 import com.proyecto.core.interfaces.IReporteGlobalServices;
 import com.proyecto.core.model.ReporteGlobalEntity;
 
+@Service
 public class ReporteGlobalService implements IReporteGlobalServices {
 
 	@Autowired
@@ -42,6 +44,6 @@ public class ReporteGlobalService implements IReporteGlobalServices {
 	public Optional<ReporteGlobalEntity> listarId(int id) {
 		// TODO Auto-generated method stub
 			
-		return null;
+		return data.findById(id);
 	}
 }

@@ -17,6 +17,7 @@
 		</div>
 		<!-- /.col-lg-12 -->
 	</div>
+	<br>
 	<!-- /.row -->
 	<div class="row">
 		<div class="col-lg-12">
@@ -29,13 +30,13 @@
 						id="dataTables-example">
 						<thead>
 							<tr>
-								<th>Capacitacion</th>
-								<th>Profesional</th>
+								<th>Capacitacion</th>								
 								<th>Empresa</th>
-								<th>Fecha Creacion</th>
-								<th>Fecha Realizada</th>
 								<th>Estado</th>
+								<th>Fecha Agendada</th>
+								<th>Fecha Realizada</th>
 								<th>Tema</th>
+								<th>Profesional</th>
 								<th>Observaciones</th>
 								<th>Acciones</th>
 							</tr>
@@ -43,22 +44,22 @@
 						<tbody>
 							<c:forEach items="${listado}" var="obj">
 								<tr class="odd gradeX">
-									<td><c:out value="${obj.capacitacion}"/></td>
-									<td><c:out value="${obj.profesional}"/></td>
+									<td><c:out value="${obj.cap}"/></td>
 									<td><c:out value="${obj.empresa}"/></td>
-									<td><c:out value="${obj.fechaAgendada}"/></td>
-									<td><c:out value="${obj.fechaRealizada}"/></td>
-									<td><c:out value="${obj.estado}"/></td>
-									<td><c:out value="${obj.tema}"/></td>
-									<td><c:out value="${obj.observacion}"/></td>
+									<td><c:out value="${obj.estadoCap}"/></td>
+									<td><c:out value="${obj.fechaAge}"/></td>
+									<td><c:out value="${obj.fechaReal}"/></td>
+									<td><c:out value="${obj.temaCap}"/></td>
+									<td><c:out value="${obj.profesional}"/></td>
+									<td><c:out value="${obj.obs}"/></td>
 									<td align="center">
 										<div class="btn-group">
-											<button class="btn btn-warning">
+											<a href="editarcapacitacion/${obj.idCaps}"><button class="btn btn-warning">
 												<i class="fa fa-pencil"></i>
-											</button>
-											<button class="btn btn-danger">
+											</button></a>
+											<a onclick="eliminarcapacitacion([[${obj.idCaps}]])"><button class="btn btn-danger">
 												<i class="fa fa-times"></i>
-											</button>
+											</button></a>
 
 										</div>
 									</td>
