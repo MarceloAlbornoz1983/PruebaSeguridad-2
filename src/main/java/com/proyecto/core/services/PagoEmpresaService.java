@@ -1,15 +1,14 @@
 package com.proyecto.core.services;
 
 import java.util.List;
-import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
 import com.proyecto.core.dao.PagoEmpresaRepository;
-import com.proyecto.core.interfaces.IPagoEmpresaSerices;
+import com.proyecto.core.interfaces.IPagoEmpresaServices;
 import com.proyecto.core.model.PagoEmpresaEntity;
 
-public class PagoEmpresaService implements IPagoEmpresaSerices {
+public class PagoEmpresaService implements IPagoEmpresaServices {
 	
 	@Autowired
 	private PagoEmpresaRepository data;
@@ -38,10 +37,4 @@ public class PagoEmpresaService implements IPagoEmpresaSerices {
 		data.deleteById(id);
 	}
 
-	@Override
-	public Optional<PagoEmpresaEntity> listarId(int id) {
-		// TODO Auto-generated method stub
-			
-		return null;
-	}
 }

@@ -14,6 +14,7 @@ public interface IProfesionalesServices {
 	public ProfesionalesEntity buscarProfesionales(int id);
 	
 	public void borrarProfesionales(int id);
+	
+	public Optional<ProfesionalesEntity> listarId(int id);
 
-	public Optional<ProfesionalesEntity>listarId(int id);
 }
