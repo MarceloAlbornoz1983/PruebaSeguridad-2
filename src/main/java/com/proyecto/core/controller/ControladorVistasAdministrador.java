@@ -17,10 +17,12 @@ import javax.validation.Valid;
 import com.proyecto.core.interfaces.IAdministradorServices;
 import com.proyecto.core.interfaces.ICapacitacionServices;
 import com.proyecto.core.interfaces.IEmpresaServices;
+import com.proyecto.core.interfaces.IPagoEmpresaServices;
 import com.proyecto.core.interfaces.IProfesionalesServices;
 import com.proyecto.core.model.AdministradorEntity;
 import com.proyecto.core.model.CapacitacionEntity;
 import com.proyecto.core.model.EmpresaEntity;
+import com.proyecto.core.model.PagoEmpresaEntity;
 import com.proyecto.core.model.ProfesionalesEntity;
 
 @Controller
@@ -35,11 +37,28 @@ public class ControladorVistasAdministrador {
 	private IAdministradorServices serviceAdmin;
 	@Autowired
 	private IProfesionalesServices servicePro;
+	@Autowired
+	private IPagoEmpresaServices servicePagoEmpresa;
+	
 
-	@GetMapping("controlpagos")
-	public String controlPago() {
+	
+	//Control pagos Paula 5-8
+	@GetMapping("/controlpagos")
+	public String controlPago(Model m) {
+		
+		List<PagoEmpresaEntity> listado = servicePagoEmpresa.mostrarPagoEmpresa();
+		m.addAttribute("listado", listado);
 		return "control_pagos";
+		
 	}
+	
+	@GetMapping("/nuevopago")
+	public String nuevoPago(Model m) {
+		m.addAttribute("pago", new PagoEmpresaEntity());
+		return "ingresar_pago";
+		
+	}
+	
 
 	@GetMapping("accidentabilidad")
 	public String calcularAccidentabilidad() {
