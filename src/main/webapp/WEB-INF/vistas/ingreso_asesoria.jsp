@@ -41,7 +41,7 @@
 
 						<div class="form-group col-lg-5">
 							<label>Asesoria incluida</label>
-							<form:input path="asesoriaInc" class="form-control" type="text" />
+							<form:input path="asesoriaInc" class="form-control" type="text" placeholder="2020-01-01"/>
 						</div>
 
 						<div class="form-group col-lg-5">
@@ -53,7 +53,7 @@
 						<div class="form-group col-lg-5">
 							<label>Fecha realizada</label>
 							<form:input path="fechaAsesoriaReal" class="form-control"
-								type="date" />
+								type="date"/>
 						</div>
 
 

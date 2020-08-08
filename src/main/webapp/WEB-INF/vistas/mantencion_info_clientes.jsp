@@ -36,7 +36,9 @@
 
 				<div class="form-group col-lg-5">
 					<label>Rut empresa</label>
-					<form:input path="rutEmp" class="form-control" type="text" />
+					<form:input path="rutEmp" class="form-control" type="text" id="rut"
+						name="rut" oninput="checkRut([[${rut}]])"
+						placeholder="Ingrese RUT" />
 				</div>
 
 				<div class="form-group col-lg-5">

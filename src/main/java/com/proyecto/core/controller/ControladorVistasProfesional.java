@@ -34,10 +34,6 @@ import com.proyecto.core.model.VisitaEntity;
 @RequestMapping("/profesional")
 public class ControladorVistasProfesional {
 
-	
-
-
-	
 	//Variable para Listar Capacitaciones
 	@Autowired
 	private ICapacitacionesServices serviceCap;

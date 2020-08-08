@@ -7,11 +7,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.proyecto.core.dao.PagoEmpresaRepository;
-import com.proyecto.core.interfaces.IPagoEmpresaSerices;
+import com.proyecto.core.interfaces.IPagoEmpresaServices;
 import com.proyecto.core.model.PagoEmpresaEntity;
 
 @Service
-public class PagoEmpresaService implements IPagoEmpresaSerices {
+public class PagoEmpresaService implements IPagoEmpresaServices {
 	
 	@Autowired
 	private PagoEmpresaRepository data;
