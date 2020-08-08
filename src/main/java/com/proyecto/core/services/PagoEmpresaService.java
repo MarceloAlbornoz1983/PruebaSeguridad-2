@@ -12,14 +12,10 @@ import com.proyecto.core.model.PagoEmpresaEntity;
 
 
 @Service
-<<<<<<< HEAD
-public class PagoEmpresaService implements IPagoEmpresaServices {
-=======
 
 public class PagoEmpresaService implements IPagoEmpresaServices {
 
 
->>>>>>> 784f1aadbe53597e562ce1ba703668941ff17e1d
 	
 	@Autowired
 	private PagoEmpresaRepository data;
