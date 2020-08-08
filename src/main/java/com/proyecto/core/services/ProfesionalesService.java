@@ -54,4 +54,10 @@ public class ProfesionalesService implements IProfesionalesServices {
 		
 	}
 
+	@Override
+	public ProfesionalesEntity agregarProfesionales(ProfesionalesEntity Profesionales) {
+		ProfesionalesEntity pro = data.save(Profesionales);
+		return pro;
+	}
+
 }

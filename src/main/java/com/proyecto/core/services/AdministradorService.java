@@ -13,7 +13,7 @@ import com.proyecto.core.model.AdministradorEntity;
 
 
 @Service
-public class AdministradorService implements IAdministradorServices {
+public class AdministradorService implements IAdministradorServices{
 	
 	@Autowired
 	private AdministradorRepository data;
@@ -51,5 +51,6 @@ public class AdministradorService implements IAdministradorServices {
 	public Optional<AdministradorEntity> listarId(int id) {
 		return data.findById(id);
 	}
+
 	
 }

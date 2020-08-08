@@ -8,6 +8,4 @@ import com.proyecto.core.model.AdministradorEntity;
 @Repository
 public interface AdministradorRepository extends CrudRepository<AdministradorEntity, Integer>{
 
-	
-
 }

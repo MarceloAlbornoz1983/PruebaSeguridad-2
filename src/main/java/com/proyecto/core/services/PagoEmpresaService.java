@@ -10,8 +10,16 @@ import com.proyecto.core.dao.PagoEmpresaRepository;
 import com.proyecto.core.interfaces.IPagoEmpresaServices;
 import com.proyecto.core.model.PagoEmpresaEntity;
 
+
 @Service
+<<<<<<< HEAD
 public class PagoEmpresaService implements IPagoEmpresaServices {
+=======
+
+public class PagoEmpresaService implements IPagoEmpresaServices {
+
+
+>>>>>>> 784f1aadbe53597e562ce1ba703668941ff17e1d
 	
 	@Autowired
 	private PagoEmpresaRepository data;
@@ -46,4 +54,5 @@ public class PagoEmpresaService implements IPagoEmpresaServices {
 			
 		return data.findById(id);
 	}
+
 }
