@@ -11,6 +11,8 @@ public interface IProfesionalesServices {
 	
 	public int crearProfesionales(ProfesionalesEntity Profesionales);
 	
+	public ProfesionalesEntity agregarProfesionales(ProfesionalesEntity Profesionales);
+	
 	public ProfesionalesEntity buscarProfesionales(int id);
 	
 	public void borrarProfesionales(int id);

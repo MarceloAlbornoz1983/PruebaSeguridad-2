@@ -22,8 +22,8 @@ class MiProyectoApplicationTests {
 	void contextLoads() {
 		
 		UsuariosEntity us = new UsuariosEntity();
-		us.setUsuario("nic");
-		us.setClave(encoder.encode("123"));
+		us.setUsuario("asdasd");
+		us.setClave(encoder.encode("asdasdasdasd"));
 		UsuariosEntity retorno = repo.save(us);
 		
 		assertTrue(retorno.getClave().equalsIgnoreCase(us.getClave()));

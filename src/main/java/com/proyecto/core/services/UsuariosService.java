@@ -1,5 +1,5 @@
 package com.proyecto.core.services;
-
+//Codigo que sera implementado despues de la prueba para incorporar la seguirdad con tablas, queda como meta personal. - nICE 
 import java.util.ArrayList;
 import java.util.List;
 
